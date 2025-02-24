@@ -1,0 +1,160 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA; /* Gris claro muy suave para fondo */
+}
+
+.search-bar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #2C3E50; /* Gris oscuro suave para el encabezado */
+    border-bottom: 2px solid #BDC3C7; /* Gris claro para la línea de separación */
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.search-input {
+    width: 80%;  /* Cambiado a un 80% para que sea más pequeña en pantallas grandes */
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #BDC3C7; /* Gris suave para el borde */
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #7F8C8D; /* Gris metálico suave al enfocar */
+}
+
+.search-btn, .add-personnel-btn {
+    padding: 8px 15px;
+    font-size: 1.1em; /* Botones más pequeños */
+    background-color: #27AE60; /* Verde elegante para los botones */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover, .add-personnel-btn:hover {
+    background-color: #2ECC71; /* Verde más claro al pasar el mouse */
+}
+
+/* Estilo de la tabla */
+.styled-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #BDC3C7; /* Gris suave para los bordes */
+}
+
+.styled-table thead {
+    background-color: #2C3E50; /* Gris oscuro para los encabezados */
+    color: white;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: #ECF0F1; /* Gris muy claro para filas pares */
+}
+
+.styled-table tbody tr:hover {
+    background-color: #BDC3C7; /* Gris más medio al pasar el mouse */
+}
+
+/* Diseño responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+    .search-form {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .search-input {
+        width: 60%;  /* Cambiado a un 60% para hacerlo más pequeño en pantallas pequeñas */
+        margin-bottom: 0;
+        font-size: 0.9em; /* Haciendo el texto un poco más pequeño */
+    }
+
+    .search-btn, .add-personnel-btn {
+        width: auto;
+        font-size: 0.7em; /* Reducir el tamaño de los botones */
+        padding: 6px 12px;
+        margin-left: 20px;
+    }
+
+    .search-btn {
+        margin-left: 10px;
+    }
+
+    .styled-table thead {
+        display: none;
+    }
+
+    .styled-table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .styled-table tbody tr td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        font-size: 0.9em;
+    }
+
+    .styled-table tbody tr td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        flex-basis: 50%;
+        text-align: left;
+        color: #333;
+    }
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #16A085; /* Verde azulado elegante */
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #1ABC9C; /* Verde más claro al pasar el mouse */
+}
+
+.pagination .active {
+    background-color: #27AE60; /* Verde para la página activa */
+}

@@ -1,0 +1,70 @@
+.producto-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.producto-imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.producto-info p {
+    margin: 5px 0;
+}
+
+.producto-precio {
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+}
+
+.producto-stock {
+    color: black;
+    font-weight: bold;
+}
+
+.btn-agregar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.btn-agregar:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para el botón de cerrar */
+.btn-cerrar {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    float: right;
+}
+
+.modal-carrito .btn-pago {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-pago:hover {
+    background-color: #45a049;
+}

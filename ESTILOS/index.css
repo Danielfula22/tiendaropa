@@ -1,0 +1,503 @@
+ /* Restablecimiento de estilos */
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilos del contenido principal */
+main {
+  margin-top: 80px;
+  padding: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.tarjeta-categoria {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.tarjeta-categoria:hover {
+  transform: translateY(-5px);
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.tarjeta-producto {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.imagen-producto {
+  width: 100%;
+  height: 200px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-producto {
+  padding: 1rem;
+}
+
+.titulo-producto {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.precio-producto {
+  color: #ff4444;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.agregar-carrito {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.agregar-carrito:hover {
+  background-color: #444;
+}
+
+/* Estilos del carrito */
+.modal-carrito {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s;
+  z-index: 1001;
+  padding: 2rem;
+}
+
+.modal-carrito.activo {
+  right: 0;
+}
+
+.encabezado-carrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.cerrar-carrito {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.items-carrito {
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+}
+
+.item-carrito {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.imagen-item-carrito {
+  width: 80px;
+  height: 80px;
+  background-color: #f0f0f0;
+}
+
+.info-item-carrito {
+  flex-grow: 1;
+}
+
+.total-carrito {
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.btn-pago {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .enlaces-nav {
+      display: none;
+  }
+
+  .modal-carrito {
+      width: 100%;
+  }
+}
+
+
+
+.seccion-promocion {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 1400px;
+}
+
+.contenedor-principal {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Estilos del contenido principal */
+.contenido-promocion {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cabecera-promocion {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.etiqueta-destacada {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+    animation: pulsar 2s infinite;
+}
+
+.etiqueta-tiempo-limitado {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.titulo-promocion {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.descripcion-promocion {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Estilos de características */
+.caracteristicas-promocion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.caracteristica {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.caracteristica:hover {
+    transform: translateY(-5px);
+}
+
+.caracteristica .icono {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.caracteristica p {
+    color: #333;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.caracteristica .detalle {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Estilos de etiquetas de productos */
+.etiquetas-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 2rem 0;
+}
+
+.etiqueta {
+    background-color: #fff;
+    color: #ff4d4d;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid #ff4d4d;
+    transition: all 0.3s ease;
+}
+
+.etiqueta:hover {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+/* Estilos de botones */
+.botones-promocion {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.boton-principal, .boton-secundario {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.boton-principal {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.boton-secundario {
+    background-color: transparent;
+    color: #ff4d4d;
+    border: 2px solid #ff4d4d;
+}
+
+.boton-principal:hover, .boton-secundario:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.2);
+}
+
+/* Estilos del contador */
+.contador-promocion {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.titulo-contador {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.tiempo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.unidad-tiempo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.numero {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff4d4d;
+}
+
+.etiqueta {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.separador {
+    font-size: 2rem;
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+/* Estilos del carrusel */
+.carrusel-promocion {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.contenedor-imagenes {
+    display: flex;
+    width: 300%;
+    animation: deslizar 15s infinite;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.info-slide {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+}
+
+.descuento {
+    background-color: #ff4d4d;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.info-slide h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.controles-carrusel {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.control-carrusel {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255,255,255,0.5);
+    cursor: pointer;
+}
+
+.control-carrusel.activo {
+    background-color: white;
+}
+
+/* Estilos de beneficios */
+.beneficios-compra {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.titulo-beneficios {
+    text-align: center;
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.contenedor-beneficios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.beneficio {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+}
+
+.icono-beneficio {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.beneficio h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.beneficio p {
+    color: #666;
+}
+
+/* Animaciones */
+@keyframes pulsar {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes deslizar {
+    0%, 28% { transform: translateX(0); }
+    33%, 61% { transform: translateX(-33.33%); }
+    66%, 94% { transform: translateX(-66.66%); }
+    100% { transform: translateX(0); }
+}
+
+
+
+
+

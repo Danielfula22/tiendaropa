@@ -1,0 +1,54 @@
+/* CSS para el menú desplegable */
+.enlaces-navegacion {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Ocultar submenús por defecto */
+.desplegable {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Ubicación debajo del enlace principal */
+    left: 0;
+    background-color: #333;
+    padding: 0.5rem 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de los enlaces en el submenú */
+.submenu li {
+    list-style: none;
+}
+
+.submenu li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+/* Mostrar submenú al pasar el mouse sobre el enlace principal */
+.desplegable:hover .submenu {
+    display: block;
+}
+
+/* Ajustes para enlaces en el submenú al pasar el mouse */
+.submenu li a:hover {
+    background-color: #444;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .enlaces-navegacion {
+        display: none;
+    }
+
+    .icono-carrito {
+        margin-left: auto;
+    }
+}

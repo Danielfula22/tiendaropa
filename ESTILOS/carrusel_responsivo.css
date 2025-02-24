@@ -1,0 +1,32 @@
+/* Configuración de Flexbox en el contenedor principal */
+.contenedor-principal {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Espacio entre elementos */
+  }
+  
+  .contenido-promocion {
+    flex: 1;
+  }
+  
+  .carrusel-promocion {
+    flex: 1;
+    order: 2; /* Orden predeterminado */
+  }
+  
+  /* Reubicación del carrusel para pantallas móviles */
+  @media (max-width: 768px) {
+    .contenedor-principal {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+  
+    .contenido-promocion {
+      order: 1;
+    }
+  
+    .carrusel-promocion {
+      order: 3; /* Mueve el carrusel debajo en móviles */
+      margin-top: 20px; /* Espacio adicional entre secciones */
+    }
+  }
+  

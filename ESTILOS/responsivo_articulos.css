@@ -1,0 +1,52 @@
+/* Contenedor principal de productos */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Reducir el espacio entre productos */
+    justify-content: center;
+}
+
+/* Estilos de las tarjetas de producto */
+.tarjeta-producto {
+    width: 200px; /* Tamaño en pantallas grandes */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px; /* Reducir el padding interno */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.tarjeta-producto:hover {
+    transform: scale(1.05);
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: auto;
+    max-width: 120px; /* Reducir el tamaño máximo de la imagen */
+}
+
+/* Ajustes para pantallas medianas (tabletas y móviles grandes) */
+@media (max-width: 768px) {
+    .productos {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .tarjeta-producto {
+        width: 45%; /* Dos productos por fila */
+    }
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .productos {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .tarjeta-producto {
+        width: 45%; /* También dos productos por fila en móviles pequeños */
+    }
+}

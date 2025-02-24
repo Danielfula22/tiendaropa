@@ -1,0 +1,123 @@
+.catalogo-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilo de cada tarjeta de producto */
+.producto-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s;
+}
+
+.producto-card:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen del producto */
+.producto-imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Nombre del producto */
+.producto-nombre {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Precio del producto */
+.producto-precio {
+    color: #e74c3c;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Botones de acción */
+.acciones {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.btn-actualizar, .btn-eliminar {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.btn-actualizar:hover {
+    background-color: #4caf50; /* Verde para actualizar */
+}
+
+.btn-eliminar:hover {
+    background-color: #e74c3c; /* Rojo para eliminar */
+}
+
+/* Estilo de la tarjeta de "Agregar nuevo producto" */
+.agregar-producto-card {
+    background-color: #f0f0f0;
+    border: 1px dashed #999;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.agregar-producto-card:hover {
+    transform: scale(1.05);
+}
+
+.agregar-producto-imagen {
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+}
+
+.agregar-producto-texto {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Estilos de paginación */
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.pagination a.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}

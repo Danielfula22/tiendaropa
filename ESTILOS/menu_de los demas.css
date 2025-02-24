@@ -1,0 +1,71 @@
+/* Menú compacto para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #333;
+        padding: 0 5px; /* Reduce el padding lateral */
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 14px; /* Reduce el tamaño de la fuente del logo */
+        color: white;
+        text-decoration: none;
+    }
+
+    .botones-sesion {
+        display: flex;
+        gap: 0.2rem; /* Espacio entre los botones de sesión */
+        align-items: center;
+        margin-right: auto; /* Empuja los botones hacia la izquierda */
+        margin-left: 10px; /* Ajusta la distancia desde el logo */
+    }
+
+    .boton-sesion {
+        font-size: 0.80rem; /* Reduce un poco más el tamaño de fuente */
+        padding: 0.2rem 0.4rem; /* Ajusta el relleno para que sea más compacto */
+        background-color: rgb(188, 32, 32);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .boton-sesion:hover {
+        background-color: darkred;
+    }
+
+    .enlaces-nav {
+        display: flex;
+        gap: 0.1rem; /* Reduce al mínimo el espacio entre enlaces */
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; /* Alineación centrada */
+        flex-grow: 1; /* Ocupa el espacio disponible */
+    }
+
+    .enlaces-nav a {
+        font-size: 0.7rem; /* Reduce el tamaño de fuente */
+        padding: 0.1rem 0.2rem; /* Reduce el relleno para hacer los botones más compactos */
+        color: white;
+        text-decoration: none;
+        text-align: center; /* Alinea el texto al centro */
+    }
+
+    /* Ajuste específico para el botón de "Accesorios" */
+    .enlaces-nav a:nth-child(4) { /* Selecciona el cuarto enlace ("Accesorios") */
+        margin-top: 2px; /* Ajuste de margen superior */
+    }
+
+    /* Estilo del carrito */
+    .contador-carrito {
+        margin-left: auto; /* Empuja el carrito hacia la derecha */
+        margin-right: 10px; /* Ajusta este valor para posicionarlo */
+        color: white;
+    }
+
+    .desplegable ul.submenu {
+        display: none;
+    }
+}

@@ -1,0 +1,97 @@
+/* Estilos del menú en pantallas grandes (computadoras) */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 100px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    flex-shrink: 0;
+    margin-right: auto;
+}
+
+.enlaces-nav {
+    display: flex;
+    gap: 1.5rem;
+    position: absolute;
+    margin-top: 110px;
+
+   
+}
+
+.enlaces-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 0.5rem;
+}
+
+/* Submenús desplegables en computadoras */
+.desplegable {
+    position: relative;
+}
+
+.desplegable ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+}
+
+.desplegable:hover ul.submenu {
+    display: block;
+}
+
+.submenu li {
+    padding: 0.5rem;
+}
+
+.submenu li a {
+    font-size: 1.0rem;
+    color: white;
+    text-decoration: none;
+}
+
+/* Menú compacto para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        padding: 0.5rem 1rem;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .enlaces-nav {
+        flex-direction: row;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        position: absolute;
+        margin-top: 90px;
+
+        
+    }
+
+    .enlaces-nav a {
+        font-size: 0.8rem;
+        padding: 0.3rem;
+    }
+
+    .submenu {
+        display: none; /* Oculta submenús para simplificar en pantallas pequeñas */
+    }
+}

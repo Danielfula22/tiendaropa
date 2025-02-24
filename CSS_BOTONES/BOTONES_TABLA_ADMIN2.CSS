@@ -1,0 +1,110 @@
+/* Fondo general de la página */
+body {
+    background-color: #f5f5f5; /* Un gris suave */
+    font-family: Arial, sans-serif;
+}
+
+/* Diseño de la tabla */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1.0em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 8px;
+    color: black;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead tr {
+    background-color: #345735; /* Verde militar */
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #5b4343;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #848181;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #4CAF50;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #534444;
+}
+
+/* Paginador */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 10px;
+    list-style: none;
+}
+
+.pagination a {
+    color: rgb(37, 114, 75);
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    margin: 0 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+.pagination a.active {
+    background-color: rgb(44, 105, 72);
+    color: white;
+    border: 1px solid rgb(44, 97, 65);
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 5px;
+}
+
+.pagination a.disabled {
+    pointer-events: none;
+    color: grey;
+}
+
+/* Botones */
+.military-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    
+}
+
+.military-btn:hover {
+    background-color: #45a049;
+}
+
+/* Contenedor del botón */
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+

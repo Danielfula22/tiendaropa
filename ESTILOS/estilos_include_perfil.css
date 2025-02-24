@@ -1,0 +1,34 @@
+/* Contenedor principal del icono */
+.perfil-boton-container {
+    position: fixed; /* Fijo en la pantalla */
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: flex; /* Alineación flexible */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    width: 60px; /* Tamaño del contenedor */
+    height: 60px; /* Tamaño del contenedor */
+    background-color: transparent; /* Fondo opcional */
+    pointer-events: auto; /* Permite interacción con el elemento */
+}
+
+/* Estilo del icono */
+.icono-perfil a {
+    font-size: 50px; /* Tamaño del icono */
+    color: #fff; /* Color inicial */
+    text-decoration: none; /* Sin subrayado */
+    display: flex; /* Centro el contenido del icono */
+    align-items: center; /* Alinea el contenido */
+    justify-content: center; /* Alinea el contenido */
+    height: 60px; /* Tamaño del área clickeable */
+    width: 60px; /* Tamaño del área clickeable */
+    border-radius: 50%; /* Forma circular */
+    transition: color 0.3s ease; /* Transición al pasar el mouse */
+}
+
+/* Cambio de color al pasar el cursor */
+.icono-perfil a:hover {
+    color: #dc6a6a; /* Cambia el color al interactuar */
+}
+

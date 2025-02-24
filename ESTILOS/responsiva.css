@@ -1,0 +1,122 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    margin-right: auto;
+}
+
+.enlaces-nav {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.enlaces-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.boton-sesion {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.boton-sesion:hover {
+    background-color: red;
+}
+
+.profile-icon, .icono-carrito {
+    color: white;
+    font-size: 24px;
+    margin-left: 15px;
+}
+
+/* Estilos para la sección de productos */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.tarjeta-producto {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    transition: width 0.3s ease;
+}
+
+.imagen-producto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.modal-carrito {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-carrito.activo {
+    display: flex;
+}
+
+.contenido-carrito {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.encabezado-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para responsividad */
+@media (max-width: 768px) {
+    .enlaces-nav {
+        flex-direction: column;
+        display: none;
+    }
+    .enlaces-nav.activo {
+        display: flex;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}

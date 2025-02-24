@@ -1,0 +1,35 @@
+/* Contenedor de botones y búsqueda */
+.button-container {
+    display: flex;  /* Usar flexbox para alinear los elementos */
+    justify-content: space-between; /* Alinear los botones a la izquierda y la búsqueda a la derecha */
+    align-items: center; /* Centrar verticalmente los elementos */
+    margin-bottom: 20px;
+  }
+  
+  .search-form {
+    display: flex; /* Usar flex para el formulario de búsqueda */
+    align-items: center; /* Alinear verticalmente */
+    justify-content: flex-end; /* Mover el formulario a la derecha */
+  }
+  
+  .search-input {
+    width: 200px; /* Ajusta el ancho como desees */
+    padding: 10px;
+    margin-right: 10px; /* Espacio entre el campo de búsqueda y el botón */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .search-btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+  }
+
+  

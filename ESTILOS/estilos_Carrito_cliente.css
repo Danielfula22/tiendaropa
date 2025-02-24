@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.icono-carrito {
+    top: 10px;
+    right: -1090px; /* Esquina superior derecha */
+    background-color: rgb(219, 52, 52);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    margin-top: -20px;
+}
+
+.icono-carrito i {
+    font-size: 28px;
+}
+
+.contador-carrito {
+    margin-left: 5px;
+    background-color: white;
+    color: #ff5722;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.modal-carrito {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-carrito.activo {
+    display: block;
+}
+
+.contenido-carrito {
+    background-color: white;
+    width: 300px;
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cerrar {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+    border-radius: 50%;
+}
+
+.btn-pago {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}

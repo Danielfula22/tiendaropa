@@ -1,0 +1,31 @@
+.botones-sesion {
+    display: flex;
+    gap: 1rem;
+}
+
+.boton-sesion {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 18px;
+
+}
+
+.boton-sesion:hover {
+    background-color: red;
+}
+
+/* Menú adaptable para pantallas pequeñas */
+@media (max-width: 768px) {
+    .botones-sesion {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .boton-sesion {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.5rem;
+    }
+}
