@@ -1,0 +1,143 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.container-fluid {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Barra de búsqueda */
+.search-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.search-input {
+    width: 350px;
+    height: 40px;
+    padding-left: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-btn {
+    background-color: #2db542; /* Azul oscuro */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-personnel-btn {
+    padding: 10px 20px;
+    background-color: #005fc5; /* Azul más oscuro */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.add-personnel-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo de la tabla */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.styled-table th {
+    background-color: #343a40;
+    color: white;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.styled-table tr:hover {
+    background-color: #ddd;
+}
+
+/* Paginación */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 8px 16px;
+    margin: 0 5px;
+    background-color: #0056b3; /* Azul oscuro */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    background-color: #417ab7; /* Azul aún más oscuro */
+}
+
+.pagination .active {
+    background-color: #4e5964; /* Azul más oscuro */
+    font-weight: bold;
+}
+
+/* Iconos de actualización y eliminación */
+.styled-table img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    font-size: 40px;
+}
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.title-container h1 {
+    margin: 0;
+}
+.title-container hr {
+    width: 30%;
+    border: 1px solid #0056b3;
+    margin-top: 5px;
+}
