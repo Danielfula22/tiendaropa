@@ -1,0 +1,382 @@
+ 
+    /* ---- Estilos generales del modal ---- */
+.modal-dialog {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ min-height: 100vh;
+}
+
+.modal-content {
+ border-radius: 12px;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+ padding: 25px;
+ background: #fdfdfd;
+ border: none;
+ width: 100%;
+ max-width: 600px;
+ transition: 0.3s ease-in-out;
+}
+
+/* ---- Encabezado del modal ---- */
+.modal-header {
+ background: linear-gradient(135deg, #8ea6c5, #6d849e);
+ color: white;
+ text-align: center;
+ padding: 18px;
+ font-size: 1.2rem;
+ font-weight: bold;
+ border-top-left-radius: 12px;
+ border-top-right-radius: 12px;
+}
+
+/* ---- Cuerpo del modal ---- */
+.modal-body {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 20px 30px;
+}
+
+/* ---- Estilos de los grupos de formulario ---- */
+.form-group {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ width: 100%;
+ margin-bottom: 15px;
+ position: relative;
+}
+
+.form-group label {
+ flex: 0 0 30%;
+ font-weight: bold;
+ text-align: right;
+ padding-right: 10px;
+ color: #555;
+}
+
+/* ---- Campos de entrada ---- */
+.form-control {
+ flex: 1;
+ border-radius: 8px;
+ border: 1px solid #bbb;
+ padding: 12px;
+ font-size: 1rem;
+ background-color: #f8f9fa;
+ transition: 0.3s ease-in-out;
+}
+
+.form-control:focus {
+ border-color: #6d849e;
+ box-shadow: 0 0 8px rgba(141, 168, 197, 0.5);
+ outline: none;
+}
+
+/* ---- Contenedor para la visibilidad de la contraseña ---- */
+.password-container {
+ position: relative;
+ width: 100%;
+}
+
+.toggle-password {
+ position: absolute;
+ right: 15px;
+ top: 50%;
+ transform: translateY(-50%);
+ cursor: pointer;
+ color: #777;
+ font-size: 1.2rem;
+}
+
+.toggle-password:hover {
+ color: #444;
+}
+
+/* ---- Pie del modal (botones) ---- */
+.modal-footer {
+ display: flex;
+ justify-content: center;
+ gap: 15px;
+ flex-wrap: wrap;
+ width: 100%;
+}
+
+/* ---- Botones ---- */
+.btn {
+ width: 45%;
+ max-width: 200px;
+ border-radius: 8px;
+ padding: 12px 15px;
+ font-size: 1rem;
+ font-weight: bold;
+ transition: all 0.3s ease-in-out;
+ text-align: center;
+ cursor: pointer;
+}
+
+/* ---- Botones con colores más suaves ---- */
+.btn-primary {
+ background: linear-gradient(135deg, #8ea6c5, #6d849e);
+ color: white;
+ border: none;
+}
+
+.btn-primary:hover {
+ background: linear-gradient(135deg, #6d849e, #5b7087);
+}
+
+.btn-secondary {
+ background: linear-gradient(135deg, #b5b5b5, #8c8c8c);
+ color: white;
+ border: none;
+}
+
+.btn-secondary:hover {
+ background: linear-gradient(135deg, #8c8c8c, #6e6e6e);
+}
+
+.btn-warning {
+ background: linear-gradient(135deg, #f4c68e, #d8a56c);
+ color: white;
+ border: none;
+}
+
+.btn-warning:hover {
+ background: linear-gradient(135deg, #d8a56c, #bb8650);
+}
+
+/* ---- Diseño responsivo ---- */
+@media (max-width: 480px) {
+ .modal-content {
+     padding: 15px;
+ }
+
+ .modal-header {
+     font-size: 1rem;
+     padding: 15px;
+ }
+
+ .form-group {
+     flex-direction: column;
+     align-items: flex-start;
+ }
+
+ .form-group label {
+     text-align: left;
+     margin-bottom: 5px;
+ }
+
+ .btn {
+     width: 100%;
+ }
+}
+
+
+
+
+
+
+
+
+
+/* Contenedor del botón de perfil */
+.perfil-boton-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Icono del perfil */
+.perfil-boton-container i {
+    font-size: 50px; /* Tamaño más pequeño */
+    color: white; /* Color blanco */
+    transition: transform 0.2s ease-in-out;
+    margin-left: 20px;
+
+margin-top: -20px;       }
+
+.perfil-boton-container:hover i {
+    transform: scale(1.1);
+}
+
+/* Tooltip con datos del usuario */
+.tooltip-perfil {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 220px;
+    font-size: 0.9rem;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    margin-left: 42px;
+    margin-top: -24px;
+}
+
+.perfil-boton-container:hover .tooltip-perfil {
+    display: block;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #8ea6c5, #6d849e);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+
+    
+}
+
+.modal-scroll {
+max-height: 60vh;  /* Altura máxima del cuerpo del modal */
+overflow-y: auto;  /* Habilita el desplazamiento vertical */
+padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+#historyButton i {
+    font-size: 23px; /* Ajusta el tamaño según necesites */
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 25px; /* Espacio para el icono dentro del input */
+}
+
+.icono-ojo {
+    position: absolute;
+    right: 20px; /* Ubicación a la derecha dentro del input */
+    color: black !important; /* Fuerza el color negro */
+    font-size: 24px !important; /* Forzar tamaño más pequeño */
+    width: 12px; /* Limitar el ancho */
+    height: 12px; /* Limitar la altura */
+    cursor: pointer;
+    z-index: 10; /* Asegura que el icono esté sobre el input */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -16px;
+}
+ /* Ajustar la posición de la barra de desplazamiento */
+ .modal-body {
+    max-height: 550px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Personalizar la barra de desplazamiento */
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Mejor posición de la "X" de cierre */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color:rgb(43, 6, 6);
+}
+
+/* Estilos para los campos con etiquetas */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #555;
+}
+
+.form-control {
+    padding-left: 40px;
+    font-size: 16px;
+}
+
+/* Icono del ojo para la contraseña */
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+.password-toggle:hover {
+    color: #007bff;
+}
+
+
+
+

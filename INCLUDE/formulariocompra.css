@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.form-container {
+    width: 85%;
+    max-width: 1100px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    border-bottom: 3px solid #ff758c;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+label {
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+input, select {
+    width: 90%;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #f8f9fa;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+input:focus, select:focus {
+    border-color: #ff758c;
+    box-shadow: 0 0 8px rgba(255, 117, 140, 0.3);
+    outline: none;
+}
+.productos-container {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f1f3f5;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.producto-detalle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 2px solid #ddd;
+    padding: 12px 0;
+}
+.producto-detalle img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ff758c;
+}
+.total-confirmar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 2px solid #ddd;
+}
+.total-container {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e63946;
+}
+.confirmar-container input {
+    background: linear-gradient(135deg, #ff758c, #ff3e6b);
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+.confirmar-container input:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 62, 107, 0.4);
+}

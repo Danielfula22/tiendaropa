@@ -1,0 +1,32 @@
+  /* Estilos del pie de página */
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.contenido-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.seccion-footer h3 {
+    margin-bottom: 1rem;
+}
+
+.seccion-footer ul {
+    list-style: none;
+}
+
+.seccion-footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.seccion-footer ul li a {
+    color: white;
+    text-decoration: none;
+}
